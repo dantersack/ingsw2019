@@ -4,3 +4,9 @@ node_js:
 
 # skip tests
 script: 'true'
+
+# heroku
+deploy:
+  provider: heroku
+  api_key:
+    secure: $HEROKU_API_KEY
