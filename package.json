@@ -5,15 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "node src",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha --reporter spec",
     "dev": "nodemon src"
   },
   "keywords": [],
   "author": "grupo3-codinamicos",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.2.0",
     "ejs": "^2.6.1",
     "express": "^4.17.1",
+    "mocha": "^6.1.4",
     "morgan": "^1.9.1"
   },
   "devDependencies": {
