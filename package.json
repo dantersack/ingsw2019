@@ -1,0 +1,22 @@
+{
+  "name": "ingsw2019",
+  "version": "1.0.0",
+  "description": "TP Integracion Continua Ing. SW 2019",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src"
+  },
+  "keywords": [],
+  "author": "grupo3-codinamicos",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
