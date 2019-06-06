@@ -15,21 +15,34 @@
 
     <div class="container">
 
-        <h2> Grupo: Codinamicos </h2>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <span class="navbar-brand">TP Integración Contínua - Grupo Codinámicos</span>
+        </nav>
+
+        <br/>
+        <h3> Agregar miembro: </h3>
 
         <form action="/addtask" method="POST">
-            
-            <input type="text" name="newtask" placeholder="nuevo miembro"> <button> Agregar </button>
-            
-            <h2> Miembros actuales </h2>
-            
-            <% for( var i = 0; i < task.length; i++){ %>
-                <li><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> </li>
-            <% } %>
-            
-            <button formaction="/removetask" type="submit"> Eliminar </button>
+            <div class="form-group">
+                <input type="text" class="form-control" name="newtask" placeholder="Nuevo miembro">
+            </div>
+            <button class="btn btn-success btn-lg btn-block"> Agregar </button>
 
-        </form>    
+            <br />
+            <hr />
+
+            <h3> Miembros actuales: </h3>
+            <div class="form-group">
+                <% for( var i = 0; i < task.length; i++){ %>
+                <li class="list-group-item"><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %>
+                </li>
+                <% } %>
+            </div>
+
+            <button formaction="/removetask" type="submit" class="btn btn-danger btn-lg btn-block"> Eliminar
+                seleccionado(s)</button>
+
+        </form>
 
     </div>
 
