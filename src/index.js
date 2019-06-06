@@ -17,6 +17,7 @@ app.listen(PORT, () => {
 // app
 
 var task = ['alan', 'dante', 'fernanda', 'nico'];
+exports.task = task;
 
 var complete = ['finish jquery'];
 
