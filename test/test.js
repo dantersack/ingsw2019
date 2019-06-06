@@ -18,4 +18,8 @@ describe('Comprobando que esten los miembros del grupo: ', function() {
         miembro = index.miembros[3];
         assert.equal(miembro, 'Nico');
     });
+    it('Comprobando que este Fede ', function() {
+        miembro = index.miembros[4];
+        assert.equal(miembro, 'Fede');
+    });
 });
