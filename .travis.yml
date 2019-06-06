@@ -13,7 +13,7 @@ notifications:
   email:
     recipients:
       - sack_dante@hotmail.com
-      - alanfiz92@gmail.
+      - alanfiz92@gmail.com
       - ortega.fernanda.g@gmail.com
       - nicomichelson@gmail.com
     on_success: always
