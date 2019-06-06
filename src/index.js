@@ -16,7 +16,7 @@ app.listen(PORT, () => {
 
 // app
 
-var miembros = ['Alan', 'Dante', 'Fernanda', 'Nico'];
+var miembros = ['Alan', 'Dante', 'Fernanda'];
 exports.miembros = miembros;
 
 // add
