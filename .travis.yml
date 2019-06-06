@@ -2,11 +2,19 @@ language: node_js
 node_js:
   - "10"
 
-# skip tests
-#script: 'true'
-
 # heroku
 deploy:
   provider: heroku
   api_key:
     secure: $HEROKU_API_KEY
+
+# notifications
+notifications:
+  email:
+    recipients:
+      - sack_dante@hotmail.com
+      - alanfiz92@gmail.
+      - ortega.fernanda.g@gmail.com
+      - nicomichelson@gmail.com
+    on_success: always
+    on_failure: always
