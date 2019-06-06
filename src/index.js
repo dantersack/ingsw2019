@@ -16,28 +16,24 @@ app.listen(PORT, () => {
 
 // app
 
-var task = ['Alan', 'Dante', 'Fernanda', 'Nico'];
-exports.task = task;
-
-var complete = ['finish jquery'];
+var miembros = ['Alan', 'Dante', 'Fernanda', 'Nico'];
+exports.miembros = miembros;
 
 // add
-app.post('/addtask', (req, res) => {
-    var newTask = req.body.newtask;
-    task.push(newTask);
+app.post('/addMiembro', (req, res) => {
+    var nuevoMiembro = req.body.nuevoMiembro;
+    miembros.push(nuevoMiembro);
     res.redirect('/');
 });
 
 // remove
-app.post("/removetask", (req, res) => {
-    var completeTask = req.body.check;
-    if (typeof completeTask === "string") {
-        complete.push(completeTask);
-        task.splice(task.indexOf(completeTask), 1);
-    } else if (typeof completeTask === "object") {
-        for (var i = 0; i < completeTask.length; i++) {
-            complete.push(completeTask[i]);
-            task.splice(task.indexOf(completeTask[i]), 1);
+app.post("/removeMiembro", (req, res) => {
+    var eliminados = req.body.eliminados;
+    if (typeof eliminados === "string") {
+        miembros.splice(miembros.indexOf(eliminados), 1);
+    } else if (typeof eliminados === "object") {
+        for (var i = 0; i < eliminados.length; i++) {
+            miembros.splice(miembros.indexOf(eliminados[i]), 1);
         }
     }
     res.redirect("/");
@@ -45,5 +41,5 @@ app.post("/removetask", (req, res) => {
 
 // index
 app.get('/', (req, res) => {
-    res.render('index', { task: task });
+    res.render('index', { miembros: miembros });
 });

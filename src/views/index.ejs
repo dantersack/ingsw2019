@@ -22,9 +22,9 @@
         <br/>
         <h3> Agregar miembro: </h3>
 
-        <form action="/addtask" method="POST">
+        <form action="/addMiembro" method="POST">
             <div class="form-group">
-                <input type="text" class="form-control" name="newtask" placeholder="Nuevo miembro">
+                <input type="text" class="form-control" name="nuevoMiembro" placeholder="Nuevo miembro">
             </div>
             <button class="btn btn-success btn-lg btn-block"> Agregar </button>
 
@@ -33,13 +33,13 @@
 
             <h3> Miembros actuales: </h3>
             <div class="form-group">
-                <% for( var i = 0; i < task.length; i++){ %>
-                <li class="list-group-item"><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %>
+                <% for( var i = 0; i < miembros.length; i++){ %>
+                <li class="list-group-item"><input type="checkbox" name="eliminados" value="<%= miembros[i] %>" /> <%= miembros[i] %>
                 </li>
                 <% } %>
             </div>
 
-            <button formaction="/removetask" type="submit" class="btn btn-danger btn-lg btn-block"> Eliminar
+            <button formaction="/removeMiembro" type="submit" class="btn btn-danger btn-lg btn-block"> Eliminar
                 seleccionado(s)</button>
 
         </form>
