@@ -12,10 +12,10 @@
   "author": "grupo3-codinamicos",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "chai": "^4.2.0",
     "ejs": "^2.6.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mocha": "^6.1.4",
     "morgan": "^1.9.1"
   },
